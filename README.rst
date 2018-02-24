@@ -24,6 +24,18 @@ Documentation
 The full documentation is at https://django-username-tools.readthedocs.io.
 
 
+Installation
+------------
+
+See `Installation`_ for instructions.
+
+
+Usage
+-----
+
+See `Usage`_ for usage info.
+
+
 Features
 --------
 
@@ -32,16 +44,12 @@ Features
 * Readable source code with 100% test coverage.
 
 
-Installation
-------------
+TODO
+----
 
-See :doc:`./installation` for installation.
-
-
-Usage
------
-
-See :doc:`./usage` for usage info.
+* Add email username field
+* A default blacklist of disposable email domains
+* API docs for modules, classes and functions
 
 
 Why use model to store the blocked usernames?
@@ -53,14 +61,6 @@ be treated like any other data in the project.
 * The list can be updated dynamically from code or by using the django admin.
 * The list can vary depending on different factors such as locality, and the scope of project etc.
 * Database backend allows more sophisticated lookups that we can leverage if required.
-
-
-TODO
-----
-
-* Add email username field
-* A default blacklist of disposable email domains
-* API docs for modules, classes and functions
 
 
 Running Tests
@@ -85,3 +85,5 @@ Tools used in rendering this package:
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`cookiecutter-djangopackage`: https://github.com/pydanny/cookiecutter-djangopackage
 .. _the-big-username-blacklist: https://github.com/marteinn/The-Big-Username-Blacklist
+.. _Installation: https://django-username-tools.readthedocs.io/en/latest/installation.html
+.. _Usage: https://django-username-tools.readthedocs.io/en/latest/usage.html
