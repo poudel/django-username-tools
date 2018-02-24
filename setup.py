@@ -3,11 +3,7 @@
 import os
 import re
 import sys
-
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup
+from setuptools import setup
 
 
 def get_version(*file_paths):
@@ -26,13 +22,13 @@ version = get_version("username_tools", "__init__.py")
 
 if sys.argv[-1] == 'publish':
     try:
-        import wheel
-        print("Wheel version: ", wheel.__version__)
+        import twine
+        print("Twine version: ", twine.__version__)
     except ImportError:
-        print('Wheel library missing. Please run "pip install wheel"')
+        print('Twine library missing. Please run "pip install twine"')
         sys.exit()
-    os.system('python setup.py sdist upload')
-    os.system('python setup.py bdist_wheel upload')
+    os.system('python setup.py sdist')
+    os.system('twine upload dist/*')
     sys.exit()
 
 if sys.argv[-1] == 'tag':
@@ -47,7 +43,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 setup(
     name='dj-username-tools',
     version=version,
-    description="""Username validation et cetera""",
+    description="""Username validation fields and utilities for Django""",
     long_description=readme + '\n\n' + history,
     author='keshaB Paudel',
     author_email='self@keshab.net',
@@ -56,21 +52,17 @@ setup(
         'username_tools',
     ],
     include_package_data=True,
-    install_requires=["django-model-utils>=2.0",],
+    install_requires=["Django>=2.0.2",],
     license="MIT",
     zip_safe=False,
     keywords='dj-username-tools',
     classifiers=[
         'Development Status :: 3 - Alpha',
         'Framework :: Django',
-        'Framework :: Django :: 1.10',
+        'Framework :: Django :: 2.0.2',
         'Intended Audience :: Developers',
-        'License :: OSI Approved :: BSD License',
+        'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 2',
-        'Programming Language :: Python :: 2.7',
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.4',
-        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 )
