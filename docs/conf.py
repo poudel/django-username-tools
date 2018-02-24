@@ -30,8 +30,7 @@ import username_tools
 # If your documentation needs a minimal Sphinx version, state it here.
 #needs_sphinx = '1.0'
 
-sys.path.insert(0, os.path.abspath('../tests'))
-os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'dev_settings'
 django.setup()
 
 # Add any Sphinx extension module names here, as strings. They can be extensions
