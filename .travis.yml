@@ -12,7 +12,7 @@ matrix:
 install: pip install -r requirements_test.txt
 
 # command to run tests using coverage, e.g. python setup.py test
-script: python runtests.py
+script: coverage run runtests.py
 
 after_success:
-  - coverage run --source username_tools runtests.py
+  - codecov
