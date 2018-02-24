@@ -1,9 +1,11 @@
 .PHONY: clean-pyc clean-build docs help
 .DEFAULT_GOAL := help
+
 define BROWSER_PYSCRIPT
 import os, webbrowser, sys
 from urllib.request import pathname2url
-webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
+moz = webbrowser.get('firefox')
+moz.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
 endef
 export BROWSER_PYSCRIPT
 BROWSER := python -c "$$BROWSER_PYSCRIPT"
@@ -41,10 +43,11 @@ docs: ## generate Sphinx HTML documentation, including API docs
 	sphinx-apidoc -o docs/ username_tools
 	$(MAKE) -C docs clean
 	$(MAKE) -C docs html
-	# $(BROWSER) docs/_build/html/index.html
+#	$(BROWSER) docs/_build/html/index.html
 
 release: clean ## package and upload a release
-	python setup.py sdist upload
+	python setup.py sdist #upload
+	python setup.py publish
 	python setup.py bdist_wheel upload
 
 sdist: clean ## package
