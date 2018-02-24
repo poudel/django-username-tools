@@ -35,13 +35,13 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
-    name='dj-username-tools',
+    name='django-username-tools',
     version=version,
     description="""Username validation fields and utilities for Django""",
     long_description=readme + '\n\n' + history,
     author='keshaB Paudel',
     author_email='self@keshab.net',
-    url='https://github.com/poudel/dj-username-tools',
+    url='https://github.com/poudel/django-username-tools',
     packages=[
         'username_tools',
     ],
@@ -49,7 +49,7 @@ setup(
     install_requires=["Django>=2.0.2",],
     license="MIT",
     zip_safe=False,
-    keywords='dj-username-tools',
+    keywords='django-username-tools',
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Django',

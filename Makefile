@@ -36,7 +36,7 @@ coverage: ## check code coverage quickly with the default Python
 	## open htmlcov/index.html
 
 docs: ## generate Sphinx HTML documentation, including API docs
-	rm -f docs/dj-username-tools.rst
+	rm -f docs/django-username-tools.rst
 	rm -f docs/modules.rst
 	sphinx-apidoc -o docs/ username_tools
 	$(MAKE) -C docs clean

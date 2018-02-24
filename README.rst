@@ -2,25 +2,25 @@
 Django Username Tools
 =============================
 
-.. image:: https://travis-ci.org/poudel/dj-username-tools.svg?branch=master
-    :target: https://travis-ci.org/poudel/dj-username-tools
+.. image:: https://travis-ci.org/poudel/django-username-tools.svg?branch=master
+    :target: https://travis-ci.org/poudel/django-username-tools
 
-.. image:: https://codecov.io/gh/poudel/dj-username-tools/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/poudel/dj-username-tools
+.. image:: https://codecov.io/gh/poudel/django-username-tools/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/poudel/django-username-tools
 
 Username validation et cetera
 
 Documentation
 -------------
 
-The full documentation is at https://dj-username-tools.readthedocs.io.
+The full documentation is at https://django-username-tools.readthedocs.io.
 
 Quickstart
 ----------
 
 Install Django Username Tools::
 
-    pip install dj-username-tools
+    pip install django-username-tools
 
 Add it to your `INSTALLED_APPS`:
 

@@ -4,9 +4,9 @@ Installation
 
 At the command line::
 
-    $ easy_install dj-username-tools
+    $ easy_install django-username-tools
 
 Or, if you have virtualenvwrapper installed::
 
-    $ mkvirtualenv dj-username-tools
-    $ pip install dj-username-tools
+    $ mkvirtualenv django-username-tools
+    $ pip install django-username-tools
