@@ -66,13 +66,23 @@ be treated like any other data in the project.
 Running Tests
 -------------
 
-Does the code actually work?
+Clone the repository. 
+If you use pipenv, which I highly recommend, run the following commands:
+
+::
+
+   pipenv install -d
+   pipenv run ./runtests.py
+
+
+If you don't use pipenv, run the following commands:
 
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install -r requirements_test.txt
+    (myenv) $ pip install -r requirements_dev.txt
     (myenv) $ python runtests.py
+
 
 Credits
 -------
